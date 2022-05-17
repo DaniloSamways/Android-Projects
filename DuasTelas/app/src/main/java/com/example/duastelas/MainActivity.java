@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
         tSenha = findViewById(R.id.tSenha);
         tSenha.setText(lerSenha());
         lembrarSenha = findViewById(R.id.lembrarSenha);
+        lembrarSenha.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(!compoundButton.isChecked()){
+                    gravarLogin("", "");
+                }
+            }
+        });
 
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
