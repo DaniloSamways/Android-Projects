@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hello</string>
+    <string name="ola">Olá</string>
+    <string name="nome">Digite seu nome</string>
+</resources>
